@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_package = "org.wso2.custom.authenticator.local.grpc";
+
+service user{
+  rpc getRoleName (User) returns (Response){};
+}
+
+message User{
+  sint64 serialVersionUID = 1;
+  string tenantDomain = 2;
+  string userStoreDomain = 3;
+  string userName = 4;
+}
+
+message Response{
+  string role = 1;
+}

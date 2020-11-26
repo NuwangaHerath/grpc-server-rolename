@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "com.devicedemo.grpc";
+
+service service{
+  rpc getRoleName(Request) returns (Response){};
+}
+message Response{
+  string  responsemessage = 1;
+}
+message Request{}
